@@ -20,6 +20,6 @@ pd.set_option('display.max_columns', None)
 
 bardf= df[['attributes.name','attributes.unsd']].copy()
 
-bardf = bardf.transpose()
+bardf = bardf.set_index('attributes.name')
 
 st.bar_chart(bardf)
