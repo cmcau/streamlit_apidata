@@ -1,10 +1,9 @@
 import streamlit as st
-
 import requests
-
 import json
-
 import pandas as pd
+import plotly.express as px
+
 response_API = requests.get('https://anss-api.dev.asiagate.com/v1/member-states')
 #print(response_API.status_code)
 data = response_API.text
@@ -22,4 +21,6 @@ bardf= df[['attributes.name','attributes.unsd']].copy()
 
 # bardf = bardf.set_index('attributes.name')
 
-st.bar_chart(bardf)
+fig = px.bar(df, x='attributes.name', y='attributes.unsd', orientation='h')
+
+st.write(fig)
