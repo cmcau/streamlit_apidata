@@ -21,6 +21,7 @@ bardf= df[['attributes.name','attributes.unsd']].copy()
 
 # bardf = bardf.set_index('attributes.name')
 
-fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h', base=0)
+# fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h', base=0)
+# st.write(fig)
 
-st.write(fig)
+st.plotly_chart(df, y='attributes.name', x='attributes.unsd', orientation='h')
