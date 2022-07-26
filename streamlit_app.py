@@ -16,12 +16,9 @@ df = pd.json_normalize(parse_json, record_path=['data'])
 pd.set_option('display.max_colwidth', None)
 pd.set_option('display.max_columns', None)
 # print(df)
-
-bardf= df[['attributes.name','attributes.unsd']].copy()
-
+# bardf= df[['attributes.name','attributes.unsd']].copy()
 # bardf = bardf.set_index('attributes.name')
 
-# fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h', base=0)
-# st.write(fig)
-
-st.plotly_chart(df, y='attributes.name', x='attributes.unsd', orientation='h')
+df.loc[df.shape[0]] = [None, None]
+fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h', base=0)
+st.write(fig)
