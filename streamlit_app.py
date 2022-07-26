@@ -23,4 +23,4 @@ bardf = bardf.set_index('attributes.name')
 # fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h')
 # st.write(fig)
 
-st.bargraph(bardf)
+st.bar_chart(bardf)
