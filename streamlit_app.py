@@ -18,7 +18,8 @@ pd.set_option('display.max_colwidth', None)
 pd.set_option('display.max_columns', None)
 # print(df)
 
-bardf= df[['attributes.name','attributes.unsd']].copy()
-print(bardf)
+bardf= pd.DataFrame(df['attributes.unsd'], columns=df['attributes.name'])
+
+# print(bardf)
 
 st.bar_chart(bardf)
