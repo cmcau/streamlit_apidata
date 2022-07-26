@@ -21,6 +21,6 @@ bardf= df[['attributes.name','attributes.unsd']].copy()
 
 # bardf = bardf.set_index('attributes.name')
 
-fig = px.bar(df, x='attributes.name', y='attributes.unsd', orientation='h')
+fig = px.bar(df, x='attributes.name', y='attributes.unsd', orientation='v')
 
 st.write(fig)
