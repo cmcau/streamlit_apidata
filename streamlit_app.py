@@ -20,5 +20,5 @@ pd.set_option('display.max_columns', None)
 # bardf = bardf.set_index('attributes.name')
 
 
-fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h', base=0)
+fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h')
 st.write(fig)
