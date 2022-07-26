@@ -20,7 +20,7 @@ df["attributes.unsd"] = pd.to_numeric(df["attributes.unsd"])
 bardf= df[['attributes.name','attributes.unsd']].copy()
 bardf = bardf.set_index('attributes.name')
 
-# fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h')
-# st.write(fig)
+fig = px.bar(df, y='attributes.name', x='attributes.unsd', orientation='h')
+st.write(fig)
 
-st.bar_chart(bardf)
+# st.bar_chart(bardf)
